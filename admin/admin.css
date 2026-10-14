@@ -1,0 +1,532 @@
+/* ============================================================
+ * MECÂNICA SILVA — Painel Administrativo
+ * Estilos (seguindo o padrão do site: vermelho #DC2626 / escuro)
+ * ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #222;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------------- Sidebar ---------------- */
+
+.sidebar {
+    width: 250px;
+    background: #1b1b1b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.marca {
+    font-size: 26px;
+    font-weight: bold;
+    color: #DC2626;
+}
+
+.marca span {
+    color: #fff;
+}
+
+.marca-sub {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 30px;
+    letter-spacing: .5px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.menu a {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .25s;
+}
+
+.menu a:hover {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.menu a.ativo {
+    background: #DC2626;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu a .icone {
+    font-size: 17px;
+}
+
+.link-site,
+.sair {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: .25s;
+}
+
+.link-site {
+    background: #2a2a2a;
+    color: #d1d5db;
+}
+
+.link-site:hover {
+    background: #374151;
+    color: #fff;
+}
+
+.sair {
+    background: #DC2626;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sair:hover {
+    background: #b91c1c;
+}
+
+/* ---------------- Conteúdo ---------------- */
+
+.conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    background: #fff;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.topo h1 {
+    font-size: 24px;
+    color: #1b1b1b;
+}
+
+.usuario {
+    color: #555;
+    font-size: 15px;
+}
+
+.usuario strong {
+    color: #DC2626;
+}
+
+.pagina {
+    padding: 30px 35px;
+}
+
+/* ---------------- Cards de estatística ---------------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .07);
+    border-left: 6px solid #DC2626;
+}
+
+.stat.escuro {
+    border-left-color: #374151;
+}
+
+.stat .num {
+    font-size: 34px;
+    font-weight: bold;
+    color: #1b1b1b;
+}
+
+.stat .rot {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* ---------------- Blocos ---------------- */
+
+.bloco {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .07);
+    margin-bottom: 25px;
+}
+
+.bloco h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+    color: #1b1b1b;
+    border-left: 5px solid #DC2626;
+    padding-left: 12px;
+}
+
+/* ---------------- Tabelas ---------------- */
+
+.tabela-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+th {
+    background: #f9fafb;
+    color: #374151;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+tr:hover td {
+    background: #fafafa;
+}
+
+.vazio {
+    text-align: center;
+    color: #9ca3af;
+    padding: 30px;
+}
+
+/* ---------------- Badges ---------------- */
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.novo,
+.badge.pendente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge.lido {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge.respondido,
+.badge.confirmado {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge.cancelado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ---------------- Botões ---------------- */
+
+.btn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.btn-vermelho {
+    background: #DC2626;
+    color: #fff;
+}
+
+.btn-vermelho:hover {
+    background: #b91c1c;
+}
+
+.btn-escuro {
+    background: #374151;
+    color: #fff;
+}
+
+.btn-escuro:hover {
+    background: #1f2937;
+}
+
+.btn-claro {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.btn-claro:hover {
+    background: #d1d5db;
+}
+
+.btn-excluir {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-excluir:hover {
+    background: #fecaca;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ---------------- Formulários ---------------- */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 13px;
+    color: #555;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: .2s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, .12);
+}
+
+.campo.full {
+    grid-column: 1 / -1;
+}
+
+.form-acoes {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+}
+
+/* ---------------- Login ---------------- */
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2F2F2F;
+}
+
+.login-card {
+    background: #fff;
+    width: 380px;
+    max-width: 92%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+}
+
+.login-card .logo {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #DC2626;
+    margin-bottom: 4px;
+}
+
+.login-card .logo span {
+    color: #1b1b1b;
+}
+
+.login-card .sub {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.login-card label {
+    display: block;
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #F0F0F0;
+    margin-bottom: 18px;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-card input:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, .15);
+}
+
+.login-card button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 20px;
+    background: #DC2626;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.login-card button:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.login-erro {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.login-dica {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ---------------- Toast ---------------- */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #1b1b1b;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.toast.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.ok {
+    border-left: 5px solid #16a34a;
+}
+
+.toast.erro {
+    border-left: 5px solid #DC2626;
+}
+
+/* ---------------- Responsivo ---------------- */
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .pagina {
+        padding: 20px;
+    }
+}

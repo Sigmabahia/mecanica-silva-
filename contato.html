@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fale conosco — Mecânica Silva">
+    <title>Fale Conosco — Mecânica Silva</title>
+    <link rel="stylesheet" href="contato.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MECÂNICA SILVA</div>
+        <nav class="nav">
+            <a href="mecanica.html" class="caixa">HOME</a>
+            <a href="index.php" class="caixa">LOJA VIRTUAL</a>
+            <a href="https://wa.me/5511917935934" class="caixa">WHATSAPP</a>
+            <a href="admin/login.php" class="caixa">ÁREA ADMIN</a>
+        </nav>
+    </header>
+
+    <main class="contato-wrapper">
+
+        <section class="contato-info">
+            <h1>Fale Conosco</h1>
+            <p>
+                Tem alguma dúvida, sugestão ou quer solicitar um orçamento?
+                Preencha o formulário ao lado e nossa equipe entrará em contato o mais rápido possível.
+            </p>
+
+            <ul class="contato-dados">
+                <li><strong>Telefone:</strong> (15) 99999-9999</li>
+                <li><strong>Instagram:</strong> @mecanicasilva.ofc</li>
+                <li><strong>Endereço:</strong> Rua Exemplo, 123 – Votorantim/SP</li>
+                <li><strong>Horário:</strong> Seg. a Sex., das 7h às 19h</li>
+            </ul>
+        </section>
+
+        <section class="contato-form-card">
+            <h2>Envie sua mensagem</h2>
+
+            <div id="alerta" class="alerta" role="alert"></div>
+
+            <form id="form-contato" novalidate>
+
+                <div class="campo">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                    <small class="erro" data-erro="nome"></small>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+                        <small class="erro" data-erro="email"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(15) 99999-9999">
+                        <small class="erro" data-erro="telefone"></small>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="Orçamento">Orçamento</option>
+                        <option value="Agendamento">Agendamento</option>
+                        <option value="Dúvida">Dúvida</option>
+                        <option value="Sugestão">Sugestão</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem (mínimo 10 caracteres)"></textarea>
+                    <small class="erro" data-erro="mensagem"></small>
+                </div>
+
+                <button type="submit" id="btn-enviar">ENVIAR MENSAGEM</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>MECÂNICA SILVA</h3>
+        <p><i>Seu carro em boas mãos.</i></p>
+        <p>© 2026 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="contato.js"></script>
+</body>
+
+</html>
