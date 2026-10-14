@@ -80,7 +80,7 @@ session_start();
     <a href="#filtros">FILTROS</a>
     <a href="#freios">FREIOS</a>
     <a href="#estetica">ESTÉTICA</a>
-    <a href="#performance">PERFORMANCE</a>
+    <a href="#performance">PERFORMANCE</a> <a href="contato.html">FALE CONOSCO</a>
 
 </nav>
 
@@ -264,7 +264,7 @@ session_start();
     <p>Rua Exemplo, 123 – Votorantim/SP</p>
     <p><strong>CEP:</strong>18100-000</p><br>
 
-    <p>© 2026 Todos os direitos reservados.</p><br>
+    <p>© 2026 Todos os direitos reservados.</p><p><a href="admin/login.php" style="color:#ff6900;text-decoration:none;font-weight:bold;">Área do Administrador</a></p><br>
 </footer>
 <script src="script.js"></script>
 </body>

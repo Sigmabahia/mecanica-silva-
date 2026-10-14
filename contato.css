@@ -1,0 +1,272 @@
+/* ============================================================
+ * MECÂNICA SILVA — Formulário de Contato
+ * Estilo seguindo o padrão do site (vermelho #DC2626)
+ * ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #E5E7EB;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- Cabeçalho ---------------- */
+
+header {
+    background: #DC2626;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav .caixa {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav .caixa:hover {
+    color: #374151;
+}
+
+/* ---------------- Layout ---------------- */
+
+.contato-wrapper {
+    flex: 1;
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    width: 90%;
+    margin: 50px auto;
+    align-items: stretch;
+}
+
+.contato-info {
+    flex: 1;
+    background: #374151;
+    color: #fff;
+    border-radius: 12px;
+    padding: 45px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+}
+
+.contato-info h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contato-info p {
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 30px;
+}
+
+.contato-dados {
+    list-style: none;
+}
+
+.contato-dados li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    color: #e5e7eb;
+    font-size: 15px;
+}
+
+.contato-dados strong {
+    color: #fff;
+}
+
+/* ---------------- Formulário ---------------- */
+
+.contato-form-card {
+    flex: 1.2;
+    background: #fff;
+    border-radius: 12px;
+    padding: 45px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+}
+
+.contato-form-card h2 {
+    font-size: 24px;
+    color: #1b1b1b;
+    margin-bottom: 25px;
+    border-left: 6px solid #DC2626;
+    padding-left: 14px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.linha {
+    display: flex;
+    gap: 15px;
+}
+
+.linha .campo {
+    flex: 1;
+}
+
+.campo label {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f9fafb;
+    outline: none;
+    transition: .2s;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #DC2626;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, .12);
+}
+
+.campo.invalido input,
+.campo.invalido select,
+.campo.invalido textarea {
+    border-color: #D61F1F;
+    background: #FFF5F5;
+}
+
+.erro {
+    color: #D61F1F;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 14px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #DC2626;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, .35);
+}
+
+button[type="submit"]:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ---------------- Alertas ---------------- */
+
+.alerta {
+    display: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.alerta.sucesso {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+    border-left: 5px solid #16a34a;
+}
+
+.alerta.falha {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 5px solid #DC2626;
+}
+
+/* ---------------- Animação ---------------- */
+
+@keyframes tremer {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+.tremor {
+    animation: tremer .35s;
+}
+
+/* ---------------- Rodapé ---------------- */
+
+footer {
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* ---------------- Responsivo ---------------- */
+
+@media (max-width: 860px) {
+    .contato-wrapper {
+        flex-direction: column;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
