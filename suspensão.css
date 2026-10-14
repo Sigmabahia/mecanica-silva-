@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:arial, sans-serif;
+}
+
+body{
+    background: #E5E7EB;
+}
+
+/* header */
+
+header {
+    background:#DC2626;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav {
+    background-color: #DC2626;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+    cursor: pointer;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold; 
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    color:#374151;
+}
+
+/* MECANICA SILVA - LOGO */
+.logo{
+    background-color: #DC2626;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.texto {
+    text-align: justify;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.texto h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #222;
+    font-weight: bold; 
+}
+
+.texto p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #222;
+    font-weight: 300;
+}
+
+.texto ul {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 300; 
+}
+
+.texto li {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 300px; 
+}

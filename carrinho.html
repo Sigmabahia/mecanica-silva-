@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+
+    <link rel="stylesheet" href="style_v3.css">
+    <link rel="stylesheet" href="style_carrinho.css">
+
+</head>
+
+<body>
+
+<div class="container-carrinho">
+    <h1>Meu Carrinho</h1>
+
+    <div id="lista-carrinho"></div>
+    <div id="total" class="total">
+        Total: R$ 0,00
+    </div>
+
+    <a href="index.php" class="voltar">
+        Continuar Comprando
+    </a>
+
+</div>
+
+<script>
+
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const lista = document.getElementById("lista-carrinho");
+const totalDiv = document.getElementById("total");
+
+function renderizarCarrinho(){
+
+    lista.innerHTML = "";
+
+    let total = 0;
+
+    if(carrinho.length === 0){
+
+        lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
+
+        totalDiv.innerHTML = "Total: R$ 0,00";
+
+        return;
+    }
+
+    carrinho.forEach((produto,index)=>{
+
+        total += produto.preco;
+
+        lista.innerHTML += `
+        
+        <div class="produto-carrinho">
+
+            <div class="produto-info">
+                <strong>${produto.nome}</strong>
+                <span>R$ ${produto.preco.toFixed(2)}</span>
+            </div>
+
+            <button
+                class="remover"
+                onclick="removerProduto(${index})">
+                Remover
+            </button>
+
+        </div>
+
+        `;
+    });
+
+    totalDiv.innerHTML =
+    "Total: R$ " + total.toFixed(2);
+
+}
+
+function removerProduto(index){
+
+    carrinho.splice(index,1);
+
+    localStorage.setItem(
+        "carrinho",
+        JSON.stringify(carrinho)
+    );
+
+    renderizarCarrinho();
+}
+
+renderizarCarrinho();
+
+</script>
+
+</body>
+</html>

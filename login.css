@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #2F2F2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login{
+    background-color: #FFFFFF;
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+
+div {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+button{
+    display: block;
+    margin: 20px auto 0;
+    width: 180px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D61F1F;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #B81818;
+}
+
+.cadastro{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cadastro p{
+    color: #555;
+
+}
+
+.cadastro a{
+    color: #ff2c2c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input:hover {
+    background-color: #E8E8E8; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.cadastro a {
+    display: inline-block; 
+    transition: all 0.2s ease; 
+}
+
+.cadastro a:hover {
+    color: #B81818; 
+    transform: scale(1.05); 
+    text-decoration: underline; 
+}
+
+button:hover{
+    background-color: #B81818;
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(214, 31, 31, 0.4); 
+}

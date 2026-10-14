@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica Silva</title>
+
+    <link rel="stylesheet" href="atendimento.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>MECÂNICA SILVA</h1>
+        </header>
+
+        <nav>
+            <a href="https://wa.me/5511917935934">FALE CONOSCO</a>
+            <a href="../mecanica.html">HOME</a>
+        </nav>
+
+        <div class="informacoes">
+
+            <select id="local">
+                <option value="">Selecione uma unidade</option>
+                <option value="Jundiaí Centro">Jundiaí Centro</option>
+                <option value="Vila Arens">Vila Arens</option>
+                <option value="Medeiros">Medeiros</option>
+            </select>
+
+            <select id="modelo">
+                <option value="">Selecione o modelo</option>
+                <option value="Gol">Gol</option>
+                <option value="Onix">Onix</option>
+                <option value="Corolla">Corolla</option>
+                <option value="Civic">Civic</option>
+                <option value="outro">Outro...</option>
+            </select>
+
+            <input
+                type="text"
+                id="outro"
+                placeholder="Digite o modelo"
+                style="display:none;"
+            >
+
+            <select id="trabalho">
+                <option value="">Selecione o serviço</option>
+                <option value="Troca de óleo">Troca de óleo</option>
+                <option value="Alinhamento">Alinhamento</option>
+                <option value="Freios">Freios</option>
+                <option value="Revisão">Revisão</option>
+                <option value="outro">Outro...</option>
+            </select>
+
+            <input
+                type="text"
+                id="outrot"
+                placeholder="Digite o serviço"
+                style="display:none;"
+            >
+
+        </div>
+
+        <div class="agendamento">
+
+            <div id="calendar">
+
+    <div class="header-calendar">
+        <button id="prev-month">&lt;</button>
+        <div id="month-year"></div>
+        <button id="next-month">&gt;</button>
+    </div>
+
+    <div class="weekdays">
+        <div>Dom</div>
+        <div>Seg</div>
+        <div>Ter</div>
+        <div>Qua</div>
+        <div>Qui</div>
+        <div>Sex</div>
+        <div>Sáb</div>
+    </div>
+
+    <div id="days"></div>
+
+</div>
+
+            <div class="horarios">
+                <h3>HORÁRIOS DISPONÍVEIS:</h3>
+            </div>
+
+        </div>
+
+        <div id="mensagem"></div>
+
+        <button id="btagendar">AGENDAR</button>
+
+     <section id="endereco">
+    LOCAL: SELECIONE UMA UNIDADE
+</section>
+
+    </div>
+
+    <footer>
+        <h3>MECÂNICA SILVA</h3>
+        <p><i>Seu carro em boas mãos.</i></p>
+        ©️ 2026 Todos os direitos reservados.
+    </footer>
+
+    <script src="atendimento.js"></script>
+
+</body>
+</html>
